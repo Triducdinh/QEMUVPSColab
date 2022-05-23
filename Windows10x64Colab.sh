@@ -13,7 +13,7 @@ wget -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-d
 wget -O windows102164.iso 'https://dl.bobpony.com/windows/10/en-us_windows_10_enterprise_ltsc_2021_x64_dvd_d289cf96.iso?__cf_chl_tk=HoMGxw1zSZNUTbzL518vV3UzlXXRspRvKClUNes5Sao-1653224153-0-gaNycGzNCT0'
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
-  -m 8G \
+  -m 6G \
   -cpu EPYC \
   -boot order=d \
   -drive file=windows102164.iso,media=cdrom \
