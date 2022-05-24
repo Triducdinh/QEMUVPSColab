@@ -13,7 +13,7 @@ wget -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-d
 wget -O windows2012r2.iso 'https://download1652.mediafire.com/oz5otm7lf0hg/6l3rs9wj6zllf63/Win2012R2.iso'
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
-  -m 8G \
+  -m 6G \
   -cpu EPYC \
   -boot order=d \
   -drive file=windows2012r2.iso,media=cdrom \
@@ -22,4 +22,4 @@ sudo qemu-system-x86_64 \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
   -device usb-tablet \
   -vnc :0 \
-  -smp cores=2 \
+  -smp cores=4 \
