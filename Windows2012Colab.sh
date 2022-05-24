@@ -16,7 +16,7 @@ sudo qemu-system-x86_64 \
   -m 8G \
   -cpu EPYC \
   -boot order=d \
-  -drive file=windows8164.iso,media=cdrom \
+  -drive file=windows2012r2.iso,media=cdrom \
   -drive file=windows.img,format=raw \
   -drive file=virtio-win.iso,media=cdrom \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
