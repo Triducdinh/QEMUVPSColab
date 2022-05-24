@@ -16,7 +16,7 @@ sudo qemu-system-x86_64 \
   -m 6G \
   -cpu EPYC \
   -boot order=d \
-  -drive file=windows216.iso,media=cdrom \
+  -drive file=windows2016.iso,media=cdrom \
   -drive file=windows.img,format=raw \
   -drive file=virtio-win.iso,media=cdrom \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
