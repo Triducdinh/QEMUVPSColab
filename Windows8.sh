@@ -13,7 +13,7 @@ wget -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-d
 wget -O windows8.iso 'https://dl.bobpony.com/windows/8.x/8.1/en_windows_8.1_with_update_x64_dvd_6051480.iso'
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
-  -m 6G \
+  -m 32G \
   -cpu EPYC \
   -boot order=d \
   -drive file=windows8.iso,media=cdrom \
@@ -22,4 +22,4 @@ sudo qemu-system-x86_64 \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
   -device usb-tablet \
   -vnc :0 \
-  -smp cores=4 \
+  -smp cores=8 \
