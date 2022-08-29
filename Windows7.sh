@@ -13,7 +13,7 @@ wget -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-d
 wget -O windows7.iso 'https://dl.bobpony.com/windows/7/en_windows_7_with_sp1_x64.iso'
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
-  -m 6G \
+  -m 8G \
   -cpu EPYC \
   -boot order=d \
   -drive file=windows7.iso,media=cdrom \
