@@ -15,6 +15,7 @@ curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*publ
 sudo qemu-system-x86_64 \
   -m 32G \
   -cpu EPYC \
+  -accel kvm \
   -boot order=d \
   -drive file=windows8.iso,media=cdrom \
   -drive file=windows.img,format=raw \
